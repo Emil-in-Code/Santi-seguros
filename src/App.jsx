@@ -1,33 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import Navbar from '../widgets/Navbar/Navbar.jsx'
+import HeroSection from './components/Hero/HeroSection.jsx'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <main>
+
+        <HeroSection />
+        <section id="companies" className="spacer">
+          <div className="loopContainer">
+            <h3 className="title-loop">Trabajo con</h3>
+            {/*<CurvedLoop 
+              marqueeText="Bonddex ✦ Sailor Paint ✦ Xingyi ✦ Aurand ✦ HG ✦ Monster ✦"
+              speed={2}
+              curveAmount={-0}
+              direction="left"
+              interactive 
+              className="custom-text-style"
+            />*/}
+          </div>
+        </section>
+
+        <section id="services" className="services-grid"> 
+          <h1>Mis Servicios</h1>
+          <>
+            seguros de vida<br></br>
+            seguro automotor<br></br>
+            seguro contra incencios<br></br>
+          </>
+        </section>
+
+      </main>
     </>
   )
 }
