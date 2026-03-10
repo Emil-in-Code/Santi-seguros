@@ -1,6 +1,7 @@
 // heroSection.jsx
 import React from 'react';
 import styles from './HeroSection.module.css';
+import CtaButton from '../CtaButton/cta.jsx';
 
 export default function HeroSection() {
   return (
@@ -13,8 +14,18 @@ export default function HeroSection() {
             <img src="" alt=""/>
             <p className={styles.parrafo}>Tengo el seguro que estás buscando</p>
             <div className={styles.cta}>
-               <button className={`${styles.btn} ${styles.btnContact}`}>Contactar</button>
-               <button className={`${styles.btn} ${styles.btnProject}`}>Buscar seguro</button>
+              <CtaButton
+                to="/registrarme" 
+                className={styles.btn} 
+                aria-label="Contactar"
+                text="Contactar"
+              />
+              <CtaButton
+                to="/pedidos" 
+                className={styles.btn}
+                aria-label="Buscar seguro"
+                text="Buscar Seguro"
+              />
             </div>
           </div> 
  

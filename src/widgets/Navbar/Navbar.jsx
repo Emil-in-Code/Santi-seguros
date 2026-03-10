@@ -1,6 +1,6 @@
 // Navbar.jsx
 import React, { useState, useEffect } from 'react';
-//import { Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
 //import logo from '../../Assets/Images/logo.webp'
 

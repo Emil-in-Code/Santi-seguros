@@ -1,10 +1,11 @@
-import Navbar from '../widgets/Navbar/Navbar.jsx'
+import Navbar from './widgets/Navbar/Navbar.jsx'
 import HeroSection from './components/Hero/HeroSection.jsx'
 import { services } from './Data/Services.js';
 function App() {
 
   return (
     <>
+      <Navbar />
       <main>
 
         <HeroSection />
@@ -24,15 +25,14 @@ function App() {
 
         <section id="services" className="services-grid"> 
           <h1>Nuestros Servicios</h1>
-          {servicesPics.map((servicio) => (
-              <div className="container-card">
+          {services.map((servicio) => (
+              <div className="container-card" key={servicio.id}>
                 <h1 className="service-title">{servicio.title}</h1>
                 <div className="img-container">
                   <img 
                     src={servicio.image} 
                     className="img" 
-                    loading="lazy" /* Importante: solo carga la imagen cuando el usuario llega a ella */
-                  />
+                    loading="lazy"                  />
                 </div>
               </div>
           ))}

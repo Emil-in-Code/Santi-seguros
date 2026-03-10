@@ -1,13 +1,13 @@
-import decesos from ''
-import hogar from ''
-import autonomo from ''
-import comunidades from ''
-import comercio from ''
-import residentes from ''
-import accidentesPers from ''
-import previsionFam from ''
-import planDentalF from ''
-import mascotas from ''
+import decesos from '../assets/43182.jpg'
+import hogar from '../assets/43182.jpg'
+import autonomo from '../assets/43182.jpg'
+import comunidades from '../assets/43182.jpg'
+import comercio from '../assets/43182.jpg'
+import residentes from '../assets/43182.jpg'
+import accidentesPers from '../assets/43182.jpg'
+import previsionFam from '../assets/43182.jpg'
+import planDentalF from '../assets/43182.jpg'
+import mascotas from '../assets/43182.jpg'
 
 export const services = [
   { 
@@ -16,9 +16,10 @@ export const services = [
     text:"descripción",
     image: decesos
   },
-  { id: 2, 
+  {
+    id: 2, 
     title: "Hogar",
-    text:"desc"
+    text:"desc",
     image: hogar
   },
   { 
@@ -46,23 +47,22 @@ export const services = [
    { 
      id: 7, 
      title: "Accidentes Personales",
-     text:"desc"
+     text:"desc",
      image:accidentesPers
    },
    { id: 8, 
      title: "Prevision Familiar ",
-     text:"desc"
+     text:"desc",
      image: previsionFam
    },
    { id: 9, 
      title: "Plan dental familiar",
-     text: "desc"
-     image: plandental
+     text: "desc",
+     image: planDentalF
    },
   { id: 10,
-    title:"Seguro para Mascotas"
-    text: "desc"
+    title:"Seguro para Mascotas",
+    text: "desc",
     image: mascotas
   }
-
 ]
