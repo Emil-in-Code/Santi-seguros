@@ -1,7 +1,42 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
+  gap: 15px;
+  padding: 80px;
+  justify-items: center;
+  margin-top:0,5rem;
+}
+
+/* 1. Limitamos el contenedor del servicio */
+.container-card {
+  width: 100%;
+  max-width: 350px; /* Ajusta este valor al ancho que quieras para cada card */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  overflow:hidden;
+}
+
+/* 2. Forzamos el contenedor de la imagen a tener un tamaño fijo */
+.img-container {
+  width: 100%;
+  height: 300px; /* Obligatorio definir una altura para que la imagen no crezca infinito */
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+/* 3. La imagen DEBE tener estas 4 propiedades */
+.img-container img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover; /* Corta los excesos sin deformar */
+  object-position: center; /* Centra la parte importante de la foto */
 }
 

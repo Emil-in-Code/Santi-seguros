@@ -1,6 +1,8 @@
 import Navbar from './widgets/Navbar/Navbar.jsx'
 import HeroSection from './components/Hero/HeroSection.jsx'
 import { services } from './Data/Services.js';
+import CurvedLoop from './components/CurvedLoop/CurvedLoop.jsx'
+import './App.css'
 function App() {
 
   return (
@@ -11,20 +13,19 @@ function App() {
         <HeroSection />
         <section id="companies" className="spacer">
           <div className="loopContainer">
-            <h3 className="title-loop">Trabajo con</h3>
-            {/*<CurvedLoop 
-              marqueeText="Bonddex ✦ Sailor Paint ✦ Xingyi ✦ Aurand ✦ HG ✦ Monster ✦"
+            <CurvedLoop 
+              marqueeText="Protege lo que más amas✦"
               speed={2}
-              curveAmount={-0}
+              curveAmount={200}
               direction="left"
               interactive 
               className="custom-text-style"
-            />*/}
+            />
           </div>
         </section>
 
         <section id="services" className="services-grid"> 
-          <h1>Nuestros Servicios</h1>
+          <h1>Nuestros <br/>Seguros</h1>
           {services.map((servicio) => (
               <div className="container-card" key={servicio.id}>
                 <h1 className="service-title">{servicio.title}</h1>
@@ -32,7 +33,9 @@ function App() {
                   <img 
                     src={servicio.image} 
                     className="img" 
-                    loading="lazy"                  />
+                    alt={servicio.title}
+                    loading="lazy"                  
+                  />
                 </div>
               </div>
           ))}
