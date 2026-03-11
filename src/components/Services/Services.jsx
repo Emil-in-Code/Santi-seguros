@@ -1,37 +1,15 @@
-import styles from './Services.module.css'
-export default function Services({
-  imgSrc,
-  imgAlt,
-  title,
-  text,
-  children,
-  containerClass, 
-  imageClass,     
-  titleClass,
-  textClass,       
-})
-{
+export default function Services({ imgSrc, imgAlt, title, text, badge }) {
   return (
-   <div className={`${styles["card-container"]} ${containerClass}`}>
-     <div className={styles["card-bg"]}>
-       <img
-         src={imgSrc}
-         alt={imgAlt}
-         className={`${styles.imagenes} ${imageClass}`} 
-       />
-     </div>
-
-     <div className={styles["info-container"]}>
-       <h2 className={`${styles["title-content"]} ${titleClass}`}> 
-         {title}
-       </h2>
-       <p className={`${styles["text-content"]} ${textClass}`}> 
-         {text}
-       </p>
-     </div>
-
-     {children && <div>{children}</div>}
-
-   </div>
- );
+    <div className="container-card">
+      <img src={imgSrc} alt={imgAlt} className="card-img-full" loading="lazy" />
+      <div className="card-overlay"></div>
+      <h2 className="card-title-static">{title}</h2>
+      {badge && <span className="card-badge">{badge}</span>}
+      <div className="service-glass-panel">
+        <div className="glass-panel-title">{title}</div>
+        <p className="glass-panel-text">{text}</p>
+        <button className="glass-panel-cta">Ver más →</button>
+      </div>
+    </div>
+  );
 }

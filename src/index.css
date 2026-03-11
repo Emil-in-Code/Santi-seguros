@@ -1,16 +1,53 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('./assets/fonts/Lora-VariableFont_wght.ttf') format('ttf');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./assets/fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf') format('ttf');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans',system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+
+  --background: #dce3ea;
+  --colorText: #1e3d3a;
+  --elementsbg:#587b98ff;
+  --white:#e1e1e1;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height:100vh;
+  background:var(--background)
+}
+
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+}
+
+
+
+
 
 

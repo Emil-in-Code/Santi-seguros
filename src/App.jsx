@@ -3,6 +3,7 @@ import HeroSection from './components/Hero/HeroSection.jsx'
 import { services } from './Data/Services.js';
 import CurvedLoop from './components/CurvedLoop/CurvedLoop.jsx'
 import './App.css'
+import Services from './components/Services/Services.jsx'
 function App() {
 
   return (
@@ -24,25 +25,24 @@ function App() {
           </div>
         </section>
 
-        <section id="services" className="services-grid"> 
-          <h1>Nuestros <br/>Seguros</h1>
+        <section id="services" className="services-grid">
+          <h1 className="section-title">Nuestros <br/>Seguros</h1>
           {services.map((servicio) => (
-              <div className="container-card" key={servicio.id}>
-                <h1 className="service-title">{servicio.title}</h1>
-                <div className="img-container">
-                  <img 
-                    src={servicio.image} 
-                    className="img" 
-                    alt={servicio.title}
-                    loading="lazy"                  
-                  />
-                </div>
-              </div>
+            <Services
+              key={servicio.id}
+              imgSrc={servicio.image}
+              imgAlt={servicio.title}
+              title={servicio.title}
+              text={servicio.text}
+              badge={servicio.badge}
+            />
           ))}
         </section>
+
       </main>
     </>
   )
 }
 
 export default App
+

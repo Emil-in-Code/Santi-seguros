@@ -5,13 +5,8 @@
   right: 0;
   z-index: 90;
   transition: all 0.3s ease;
-  background: transparent;
-}
-
-.header.scrolled {
-  background: var(--bgColor);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: #1e3d3a39;
+  backdrop-filter:blur(5px);
 }
 
 /* Nav Container */
@@ -22,7 +17,7 @@ nav {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,8 +36,7 @@ nav {
 }
 
 .logoIcon {
-  width: 80px;
-  height: 80px;
+  width: 60px;
 }
 
 .logoSvg {
@@ -53,14 +47,6 @@ nav {
 .logoText {
   font-size: 1.5rem;
   font-weight: bold;
-}
-
-.logoPink {
-  color: var(--primary);
-}
-
-.logoGrey {
-  color: var(--grey);
 }
 
 /* Desktop Menu */
@@ -77,9 +63,9 @@ nav {
 }
 
 .navLink {
-  color: #e1e1e1;
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 900;
   transition: color 0.3s ease;
   position: relative;
 }
@@ -91,7 +77,7 @@ nav {
   left: 0;
   width: 0;
   height: 2px;
-  background: #b2113bff;
+  background: var(--white);
   transition: width 0.3s ease;
 }
 
@@ -106,7 +92,7 @@ nav {
   justify-content: center;
   background: transparent;
   border: none;
-  color: white;
+  color: var(--white);
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -127,8 +113,9 @@ nav {
   flex-direction: column;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  background: #121212;
-  border-top: 1px solid #b2113b40;
+  background: #1e3d3a39;
+  backdrop-filter:blur(5px);
+  border-top: 1px solid #1e3e3a39;
   animation: slideDown 0.3s ease-out;
 }
 
@@ -150,33 +137,19 @@ nav {
 }
 
 .mobileLink {
-  color: #e1e1e1;
+  color: var(--white);
   text-decoration: none;
   padding: 0.75rem 0;
   font-weight: 500;
   transition: all 0.3s ease;
-  border-bottom: 1px solid #b2113b40;
+  border-bottom: 1px solid var(--elementsbg);
 }
 
-.mobileLink:hover {
-  color:  #b2113bff;
+.mobileLink:active {
+  background: #dce3ea;
+  color:#000;
   padding-left: 0.5rem;
+
 }
 
-.mobileCtaButton {
-  background:  #b2113bff;
-  color: #e1e1e1;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  transition: all 0.3s ease;
-}
 
-.mobileCtaButton:active {
-  color:  #b2113bff;
-  background: #e1e1e1;
-  transform: scale(1.02);
-}

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
-//import logo from '../../Assets/Images/logo.webp'
+import logo from '../../assets/Favicon 1.svg'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,6 +18,12 @@ export default function Navbar() {
     <header className={`${styles.header}`}>
       <nav className={styles.nav}>
         <div className={styles.container}>
+          <a href="/" className={styles.logo}>
+            <div className={styles.logoIcon}>
+              <img src={logo} className={styles.logoSvg} />
+
+            </div>
+          </a>
           {/* Desktop Menu */}
           <div className={styles.desktopMenu}>
             <a href="#servicios" className={styles.navLink}>Servicios</a>

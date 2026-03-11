@@ -13,8 +13,9 @@
   width: 100%;
   aspect-ratio: 100 / 12;
   overflow: visible;
-  font-size: 2rem;
-  fill: var(--grey);
+  font-family:'Lora';
+  font-size: clamp(2rem, 2vw, 2rem);
+  fill: #1e3d3a;
   background: var(--primary);
   user-select: none;
   padding-top:4rem;

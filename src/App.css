@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+  background:var(--background);
 }
 
 .services-grid {
@@ -13,30 +14,120 @@
   justify-items: center;
   margin-top:0,5rem;
 }
+.section-title{
+  color:var(--elementsbg);
+  font-weight:800;
+  font-size: clamp(1rem, 4vw, 4rem);
+  line-height:clamp(1rem, 5vw, 3rem);
 
-/* 1. Limitamos el contenedor del servicio */
+}
+
+.service-title{
+  color:var(--colorText)
+}
+
 .container-card {
+  position: relative;
   width: 100%;
-  max-width: 350px; /* Ajusta este valor al ancho que quieras para cada card */
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #ddd;
-  overflow:hidden;
-}
-
-/* 2. Forzamos el contenedor de la imagen a tener un tamaño fijo */
-.img-container {
-  width: 100%;
-  height: 300px; /* Obligatorio definir una altura para que la imagen no crezca infinito */
+  max-width: 320px;
+  height: 420px;
+  border-radius: 16px;
   overflow: hidden;
-  background-color: #f0f0f0;
+  cursor: pointer;
 }
 
-/* 3. La imagen DEBE tener estas 4 propiedades */
-.img-container img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover; /* Corta los excesos sin deformar */
-  object-position: center; /* Centra la parte importante de la foto */
+.container-card .card-img-full {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.container-card:hover .card-img-full {
+  transform: scale(1.07);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(8, 5, 20, 0.65) 100%);
+  z-index: 1;
+}
+
+.card-title-static {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  z-index: 3;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.container-card:hover .card-title-static {
+  transform: translateY(-130px);
+  opacity: 0;
+}
+
+.service-glass-panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0 0 16px 16px;
+  padding: 20px 18px 24px;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container-card:hover .service-glass-panel {
+  transform: translateY(0%);
+}
+
+.glass-panel-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.glass-panel-text {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--white);
+  margin-bottom: 14px;
+  font-weight:400;
+  font-family:'Lora';
+}
+
+.glass-panel-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color:var(--white);
+  background: rgba(255, 255, 255, 0.15);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  padding: 7px 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.glass-panel-cta:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
 
