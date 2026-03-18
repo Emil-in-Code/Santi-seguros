@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
-import logo from '../../assets/Favicon 1.svg'
+import logo from '../../assets/Página 8.svg'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,9 +27,9 @@ export default function Navbar() {
           </a>
           {/* Desktop Menu */}
           <div className={styles.desktopMenu}>
-            <a href="#servicios" className={styles.navLink}>Servicios</a>
-            <a href="#projects" className={styles.navLink}>Proyectos</a>
-            <a href="#contacto" className={styles.navLink}>Contacto</a>
+            <a href="#services" className={styles.navLink}>Servicios</a>
+            <a href="#Info" className={styles.navLink}>Sobre Mí</a>
+            <a href="#Footer" className={styles.navLink}>Contactos</a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -47,10 +48,10 @@ export default function Navbar() {
             <a href="#servicios" className={styles.mobileLink} onClick={closeMenu}>
               Servicios
             </a>
-            <a href="#proyectos" className={styles.mobileLink} onClick={closeMenu}>
-              Proyectos
+            <a href="#Info" className={styles.mobileLink} onClick={closeMenu}>
+              Sobre mí
             </a>
-            <a href="#contacto" className={styles.mobileLink} onClick={closeMenu}>
+            <a href="#Footer" className={styles.mobileLink} onClick={closeMenu}>
               Contacto
             </a>
 

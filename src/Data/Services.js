@@ -1,13 +1,13 @@
-import decesos from '../assets/Decesos.webp'
-import hogar from '../assets/heroimg.webp'
-import autonomo from '../assets/heroimg.webp'
-import comunidades from '../assets/comunidades.webp'
-import comercio from '../assets/comercio.webp'
-import residentes from '../assets/residentes.webp'
-import accidentesPers from '../assets/heroimg.webp'
-import previsionPer from '../assets/heroimg.webp'
-import planDentalF from '../assets/heroimg.webp'
-import mascotas from '../assets/43182.jpg'
+import decesos from '../assets/services/Decesosr.webp'
+import hogar from '../assets/services/hogarR.webp'
+import autonomo from '../assets/services/Autonomosr.webp'
+import comunidades from '../assets/services/comunidadesr.webp'
+import comercio from '../assets/services/comercior.webp'
+import residentes from '../assets/services/residentesr.webp'
+import accidentesPers from '../assets/services/accidentePerR.webp'
+import previsionPer from '../assets/services/Previr.webp'
+import planDentalF from '../assets/services/Dentalr.webp'
+import mascotas from '../assets/services/Mascotasr.webp'
 
 export const services = [
   { 
@@ -15,7 +15,38 @@ export const services = [
     title: "Seguro de Decesos",
     text: "Llegado el momento, nos hacemos cargo de todo.",
     image: decesos,
-    waMessage: "Hola, estoy interesado en el Seguro de Decesos ¿me podrías dar más información?"
+    waMessage: "Hola, estoy interesado en el Seguro de Decesos ¿me podrías dar más información?",
+    badge:"más contratado",
+    detail:
+    `
+      <p>Es el Seguro de Decesos que tú y tu familia necesitáis, porque llegado el momento, es la forma de asegurarte que no tengan que preocuparse por nada, porque con <br><strong>Preventiva VIVO</strong>, tu tranquilidad y la de los tuyos es lo que más nos importa.</p>
+      <h2>Coberturas Incluídas</h2>
+      <ul>
+        <li>
+          <h3>Traslado completo</h3>
+          <article>Gestión y gastos desde cualquier parte del mundo al cementerio elegido en España. Incluye gastos de acompañante (hasta 1.500€) y retorno de menores.</article>
+        </li>
+        <li>
+          <h3>Asistenecia psicológica</h3>
+          <article>Orientación y apoyo profesional en momentos de crisis o angustia tras la pérdida.</article>
+        </li>
+        <li> 
+          <h3>Asistenecia al servicio funerario</h3>
+          <article>Apoyo total a la familia desde el primer momento hasta el final del servicio.</article>
+        </li>
+        <li>
+          <h3>Testamento abierto Notarial</h3>
+          <article>Asistencia web/telefónica y firma ante notario (incluso a domicilio si hay movilidad reducida).</article>
+        </li>
+        <li>
+          <h3>Testamento vital</h3>
+          <article>Asesoría legal para dejar instrucciones sobre cuidados de salud y destino final del cuerpo u órganos.</article>
+        </li>
+        <li>
+          <h3>Gestiones jurídicas</h3>
+          <article>Tramitación de herencias, pensiones y redacción de documentos ante cualquier organismo.</article>
+        </li>
+      </ul>`
   },
   {
     id: 2, 
@@ -27,7 +58,7 @@ export const services = [
   { 
     id: 3, 
     title: "Autonomo",
-    text: "desc",
+    text: "Protege tu nivel de ingresos ante cualquier enfermedad o accidente",
     image: autonomo,
     waMessage: "Hola, estoy interesado en el Seguro para Autónomos ¿me podrías dar más información?"
   },
@@ -41,7 +72,7 @@ export const services = [
   { 
     id: 5, 
     title: "Comercio y Pymes",
-    text: "Porque tu negocio o empresa es tu medio de vida...",
+    text: "Pase lo que pase tu negocio no debe parar",
     image: comercio,
     waMessage: "Hola, estoy interesado en el Seguro de Comercio y Pymes ¿me podrías dar más información?"
   },
@@ -55,14 +86,14 @@ export const services = [
   { 
     id: 7, 
     title: "Accidente Personal",
-    text: "El seguro para cualquier tipo de accidente o situación de riesgo familiar...",
+    text: "Haz lo que más amas sin preocuparte, estás cubierto",
     image: accidentesPers,
     waMessage: "Hola, estoy interesado en el Seguro de Accidente Personal ¿me podrías dar más información?"
   },
   { 
     id: 8, 
     title: "Prevision Personal",
-    text: "Si eres de los que piensan en el futuro de tu familia...",
+    text: "Para quienes ponen primero el futuro de su familia",
     image: previsionPer,
     waMessage: "Hola, estoy interesado en el Plan de Previsión Personal ¿me podrías dar más información?"
   },
@@ -76,7 +107,7 @@ export const services = [
   { 
     id: 10,
     title: "Seguro para Mascotas",
-    text: "La solución para cumplir con la Ley 7/2023 de Bienestar Animal...",
+    text: "Porque son un integrante más de la familia",
     image: mascotas,
     waMessage: "Hola, estoy interesado en el Seguro para Mascotas ¿me podrías dar más información?"
   }

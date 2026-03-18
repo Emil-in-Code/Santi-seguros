@@ -1,14 +1,36 @@
-export default function Services({ imgSrc, imgAlt, title, text, badge }) {
+import { Link } from 'react-router-dom';
+import styles from './Services.module.css'
+export default function Services({ id, imgSrc, imgAlt, title, text, badge,waMessage, loading = "lazy"}) {
+  
+  const phoneNumber = "34614866499"
+  const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(waMessage)}`;
+  
   return (
-    <div className="container-card">
-      <img src={imgSrc} alt={imgAlt} className="card-img-full" loading="lazy" />
-      <div className="card-overlay"></div>
-      <h2 className="card-title-static">{title}</h2>
-      {badge && <span className="card-badge">{badge}</span>}
-      <div className="service-glass-panel">
-        <div className="glass-panel-title">{title}</div>
-        <p className="glass-panel-text">{text}</p>
-        <button className="glass-panel-cta">Ver más →</button>
+    <div className={styles.containerCard}>
+      <img src={imgSrc} alt={imgAlt} className={styles.cardImgFull} loading={loading} />
+      <div className={styles.cardOverlay}></div>
+      <h2 className={styles.cardTitleStatic}>{title}</h2>
+      {badge && <span className={styles.cardBadge}>{badge}</span>}
+
+      <div className={styles.serviceGlassPanel}>
+        <div className={styles.glassPanelTitle}>{title}</div>
+        <p className={styles.glassPanelText}>{text}</p>
+        <Link
+          to={`/seguro/${id}`}
+          target="_blank"
+          className={styles.glassPanelCta}
+        > 
+        Ver +
+        </Link>
+        
+        <a 
+          href={waLink} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className={styles.glassPanelCta}
+        >
+        WP →
+        </a>
       </div>
     </div>
   );

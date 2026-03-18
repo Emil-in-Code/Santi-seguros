@@ -22,7 +22,7 @@ export default function HeroSection() {
           pillarRotation={225}
           interactive={false}
           mixBlendMode="screen"
-          quality="high"
+          quality="medium"
         />
       </div>
 
@@ -39,12 +39,12 @@ export default function HeroSection() {
 
           <div className={styles.cta}>
             <CtaButton
-              to="/registrarme" 
+              wp="34614866499" 
               className={styles.ctaBtn} 
               text="Contactar"
             />
             <CtaButton
-              to="/pedidos" 
+              href="#services" 
               className={styles.buscarBtn}
               text="Ver Seguros"
             />
