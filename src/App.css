@@ -19,4 +19,6 @@
   font-weight:800;
   font-size: clamp(1rem, 4vw, 4rem);
   line-height:clamp(1rem, 5vw, 3rem);
+  display:flex;
+  align-items:center;
 }

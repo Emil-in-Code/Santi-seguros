@@ -16,6 +16,10 @@ export default function ServiceDetail() {
   const phoneNumber = "34614866499";
   const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(servicio.waMessage)}`;
 
+  const currentIndex = services.findIndex(s => s.id === parseInt(id));
+  const prev = services[currentIndex - 1];
+  const next = services[currentIndex + 1];
+
   return (
     <div className={styles.pageWrapper}>
 
@@ -101,7 +105,17 @@ export default function ServiceDetail() {
             </ul>
           </div>
 
-          <Link to="/" className={styles.backLink}>← Volver a todos los seguros</Link>
+          <div className={styles.navRow}>
+                     {prev
+                       ? <Link to={`/seguro/${prev.id}`} className={styles.navLink}>← {prev.title}</Link>
+                       : <span />
+                     }
+                     <Link to="/" className={styles.backLink}>Todos</Link>
+                     {next
+                       ? <Link to={`/seguro/${next.id}`} className={styles.navLink}>{next.title} →</Link>
+                       : <span />
+                     }
+          </div>
 
         </aside>
       </div>
