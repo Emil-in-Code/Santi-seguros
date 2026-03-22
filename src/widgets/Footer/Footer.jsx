@@ -1,49 +1,51 @@
 import styles from './Footer.module.css'
 
-export default function Footer({id}) {
-
-  return(
+export default function Footer({ id }) {
+  return (
     <footer id={id} className={styles.footer}>
+      <div className={styles.inner}>
 
-      <div className={styles.containerLinks}>
-        
-        <a 
-          className={styles.footLink}
-          href="https://wa.me/34614866499" 
-          target="_blank" 
-          rel="noopener noreferrer"
-        >
-          📱34614866499
-        </a>
+        <div className={styles.brand}>
+          <p className={styles.brandName}>De Sandro-Seguros</p>
+          <div className={styles.divider} />
+          <p className={styles.tagline}>Tu tranquilidad, mi prioridad</p>
+        </div>
 
-        <a
-          className={styles.footLink}
-          href="https://instagram.com/" target="_blank" 
-          rel="noopener noreferrer"
-        >
-          📷 mi instagram 
-        </a>
-        
-        <a 
-          className={styles.footLink}
-          href="mailto:desandroseguros@gmail.com">
-          ✉️ desandroseguros@gmail.com
-        </a>
+        <div className={styles.links}>
+          <a className={styles.linkItem} href="https://wa.me/34614866499" target="_blank" rel="noopener noreferrer">
+            <span>
+              <span className={styles.linkLabel}>WhatsApp</span>
+              <span className={styles.linkValue}>+34 614 866 499</span>
+            </span>
+          </a>
+          <a className={styles.linkItem} href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+            <span>
+              <span className={styles.linkLabel}>Instagram</span>
+              <span className={styles.linkValue}>@desandroseguros</span>
+            </span>
+          </a>
+          <a className={styles.linkItem} href="mailto:desandroseguros@gmail.com">
+            <span>
+              <span className={styles.linkLabel}>Email</span>
+              <span className={styles.linkValue}>desandroseguros@gmail.com</span>
+            </span>
+          </a>
+          <div className={styles.linkItem}>
+            <span>
+              <span className={styles.linkLabel}>Ubicación</span>
+              <span className={styles.linkValue}>Valencia, España</span>
+            </span>
+          </div>
+        </div>
 
-        <p className={styles.footLink}>
-          📍 Valencia - España
-        </p>
+        <div className={styles.bottom}>
+          <span className={styles.copy}> 2026 Desandro Seguros — Todos los derechos reservados</span>
+          <span className={styles.dev}>
+            Diseñado y desarrollado con ♥ por <a href="#" className={styles.devLink}>Emilio Flor</a>
+          </span>
+        </div>
 
       </div>
-
-      <div className={styles.devText}>
-        <p>Diseñado y desarrollado con ♥ por</p>
-        <a
-          href="#" className={styles.devLink}>  
-          Emilio Flor
-        </a>
-      </div>
-
     </footer>
-  );
+  )
 }

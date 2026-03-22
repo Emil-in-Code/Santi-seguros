@@ -22,3 +22,22 @@
   display:flex;
   align-items:center;
 }
+
+/*CurvedLoop*/
+.spacer {
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  color: #e1e1e1;
+}
+
+.loopContainer{
+  width:100%;
+  background:blue;
+}
+
+.custom-text-style{
+  font-size:clamp(8rem, 6vw, 2rem);
+  background:red;
+}
