@@ -1,9 +1,10 @@
-// HeroSection.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import styles from './HeroSection.module.css';
 import CtaButton from '../CtaButton/cta.jsx';
 import heroImage from '../../assets/heroimg.webp';
-import LightPillar from '../LightPillar/LightPillar.jsx';
+
+// 🔥 Lazy load REAL
+const LightPillar = lazy(() => import('../LightPillar/LightPillar.jsx'));
 
 function useBreakpoint() {
   const [breakpoint, setBreakpoint] = useState(() => {
@@ -33,26 +34,47 @@ export default function HeroSection() {
   const isMobile = breakpoint === 'mobile';
   const isTablet = breakpoint === 'tablet';
 
+  // 🔥 Delay controlado (mejora LCP)
+  const [showEffect, setShowEffect] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowEffect(true);
+    }, 500); // podés ajustar 300–800ms
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className={`${styles.heroContainer} ${styles[breakpoint]}`}>
 
-      {/* Fondo: LightPillar en desktop/tablet, CSS gradient en mobile */}
+      {/* 🔥 Fondo optimizado */}
       {!isMobile ? (
         <div className={styles.pillarBackground}>
-          <LightPillar
-            topColor="#587b98"
-            bottomColor="#587b98"
-            intensity={isTablet ? 0.35 : 0.4}
-            rotationSpeed={0.9}
-            glowAmount={0.002}
-            pillarWidth={isTablet ? 6 : 8}
-            pillarHeight={0.4}
-            noiseIntensity={0.5}
-            pillarRotation={225}
-            interactive={false}
-            mixBlendMode="screen"
-            quality={isTablet ? 'low' : 'medium'}
-          />
+
+          {/* 👇 Fallback SIEMPRE presente */}
+          <div className={styles.mobileBg} />
+
+          {/* 👇 Solo carga si pasa condiciones */}
+          {showEffect && (
+            <Suspense fallback={null}>
+              <LightPillar
+                topColor="#587b98"
+                bottomColor="#587b98"
+                intensity={isTablet ? 0.35 : 0.4}
+                rotationSpeed={0.9}
+                glowAmount={0.002}
+                pillarWidth={isTablet ? 6 : 8}
+                pillarHeight={0.4}
+                noiseIntensity={0.5}
+                pillarRotation={225}
+                interactive={false}
+                mixBlendMode="screen"
+                quality={isTablet ? 'low' : 'medium'}
+              />
+            </Suspense>
+          )}
+
         </div>
       ) : (
         <div className={styles.mobileBg} aria-hidden="true" />
@@ -61,12 +83,13 @@ export default function HeroSection() {
       {/* Contenido */}
       <div className={styles.wrapper}>
 
-        {/* En tablet y mobile: imagen va ARRIBA del texto */}
         {(isTablet || isMobile) && (
           <img
             src={heroImage}
             alt="foto de familia con perro"
             className={styles.imgHero}
+            loading="eager"
+            decoding="async"
           />
         )}
 
@@ -74,6 +97,7 @@ export default function HeroSection() {
           <h1 className={styles.title}>
             DE SANDRO<br />AGENTE DE SEGUROS
           </h1>
+
           <p className={styles.parrafo}>
             Deja de pelear con seguros que no responden.<br />
             Yo gestiono todo el proceso, tú descansas.
@@ -93,12 +117,13 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* En desktop: imagen va a la DERECHA del texto */}
         {!isTablet && !isMobile && (
           <img
             src={heroImage}
             alt="foto de familia con perro"
             className={styles.imgHero}
+            loading="eager"
+            decoding="async"
           />
         )}
 

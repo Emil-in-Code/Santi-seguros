@@ -8,19 +8,25 @@
 /*este es el layout del section services, los estilos de las cards están en el respectivo module.css*/
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); 
-  gap: 15px;
-  padding: 80px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 80px 20px;
   justify-items: center;
-  margin-top:0,5rem;
+  align-items:center;
 }
 .section-title{
   color:var(--elementsbg);
   font-weight:800;
-  font-size: clamp(1rem, 4vw, 4rem);
-  line-height:clamp(1rem, 5vw, 3rem);
-  display:flex;
-  align-items:center;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height:1;
+  margin-bottom:20px;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    padding: 80px; /* Recuperamos el padding original en desktop */
+    gap: 15px;
+  }
 }
 
 /*CurvedLoop*/

@@ -43,9 +43,8 @@
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 70% 55% at 50% 35%, #587b98cc 0%, transparent 65%),
-    radial-gradient(ellipse 55% 45% at 50% 65%, #3a5f7d99 0%, transparent 60%),
-    #0f1e2a;
+
+    #000;
 }
 
 .textGroup{

@@ -6,7 +6,7 @@ import './App.css'
 import Services from './components/Services/Services.jsx'
 import Footer from './widgets/Footer/Footer.jsx'
 import AboutMe from './components/AboutMe/AboutMe.jsx'
-import { Routes, Route } from 'react-router-dom'; // Quitamos Router de aquí
+import { Routes, Route } from 'react-router-dom'; 
 import ServiceDetail from './pages/ServiceDetail.jsx'; 
 
 function App() {
