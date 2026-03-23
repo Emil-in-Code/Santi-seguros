@@ -1,7 +1,6 @@
 import Navbar from './widgets/Navbar/Navbar.jsx'
 import HeroSection from './components/Hero/HeroSection.jsx'
 import { services } from './Data/Services.js';
-import CurvedLoop from './components/CurvedLoop/CurvedLoop.jsx'
 import './App.css'
 import Services from './components/Services/Services.jsx'
 import Footer from './widgets/Footer/Footer.jsx'
