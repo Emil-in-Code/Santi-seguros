@@ -1,0 +1,186 @@
+export const LAST_UPDATED = "25 de marzo de 2026";
+
+export const RESPONSIBLE = {
+  name: "Santiago De Sandro",
+  trade: "De Sandro Seguros",
+  address: "Calle Benidoleig 4, 3.ª planta, puerta 8,CP 46017 Valencia, España",
+  email: "desandroseguros@gmail.com",
+  website: "segurosdesandro.es",
+};
+
+export const sections = [
+  {
+    id: "informacion",
+    number: "1",
+    title: "¿Qué información recopilamos?",
+    subsections: [
+      {
+        title: "Información que usted nos proporciona voluntariamente",
+        content:
+          "Cuando utiliza los botones de contacto de nuestro sitio web (correo electrónico o WhatsApp), nos facilita voluntariamente su nombre, número de teléfono y/o dirección de correo electrónico, así como cualquier otra información que incluya en su mensaje. La base legal para este tratamiento es el consentimiento del interesado (art. 6.1.a RGPD), que usted presta de forma inequívoca al iniciar el contacto.",
+      },
+      {
+        title: "Información recopilada automáticamente",
+        content:
+          "Cuando visita nuestro sitio web, podemos recopilar automáticamente determinada información técnica. Esta información se recoge mediante cookies y tecnologías de seguimiento de terceros, sujetas al consentimiento previo del usuario.",
+        list: [
+          "Dirección IP y datos de geolocalización aproximada.",
+          "Tipo de navegador y sistema operativo.",
+          "Páginas visitadas, tiempo de permanencia y acciones realizadas en el sitio.",
+          "Datos del dispositivo (tipo, identificadores técnicos).",
+        ],
+      },
+      {
+        title: "Información sensible",
+        content:
+          "No procesamos datos personales de categorías especiales (datos sensibles) de forma voluntaria ni intencionada.",
+      },
+    ],
+  },
+  {
+    id: "procesamiento",
+    number: "2",
+    title: "¿Cómo procesamos su información?",
+    content:
+      "Procesamos su información personal con las siguientes finalidades:",
+    list: [
+      "Atender y responder a sus consultas y solicitudes de contacto.",
+      "Analizar el uso del sitio web para mejorar su funcionamiento y contenido (analítica web).",
+      "Mostrar publicidad personalizada y medir el rendimiento de nuestras campañas de marketing digital (Google Ads, Meta Ads), siempre previa obtención de su consentimiento.",
+      "Cumplir con nuestras obligaciones legales.",
+      "Proteger los intereses vitales del interesado o de terceros en casos excepcionales.",
+    ],
+  },
+  {
+    id: "bases-legales",
+    number: "3",
+    title: "Bases legales para el tratamiento",
+    content:
+      "De acuerdo con el Reglamento (UE) 2016/679 (RGPD), el tratamiento de sus datos personales se fundamenta en las siguientes bases legales:",
+    list: [
+      "Consentimiento (art. 6.1.a): para el tratamiento de cookies de analítica y publicidad, y para el envío de comunicaciones comerciales.",
+      "Ejecución de un contrato o medidas precontractuales (art. 6.1.b): cuando el tratamiento es necesario para atender su solicitud de información sobre nuestros servicios.",
+      "Cumplimiento de obligación legal (art. 6.1.c): cuando la ley nos obliga a conservar o comunicar determinados datos.",
+      "Intereses legítimos (art. 6.1.f): para la mejora de nuestros servicios y la seguridad del sitio web, siempre que no prevalezcan sus derechos y libertades.",
+    ],
+  },
+  {
+    id: "compartir",
+    number: "4",
+    title: "¿Cuándo y con quién compartimos su información?",
+    subsections: [
+      {
+        title: "Proveedores de servicios y encargados del tratamiento",
+        content:
+          "Compartimos datos con los siguientes terceros en calidad de encargados del tratamiento, conforme a acuerdos que cumplen con el RGPD:",
+        list: [
+          "Google LLC (Google Analytics 4 y Google Ads): para analítica web y publicidad. Google actúa bajo el Marco de Privacidad de Datos UE-EE.UU.",
+          "Meta Platforms Ireland Ltd (Meta Pixel / Facebook Ads): para publicidad personalizada y medición de conversiones, si este servicio se encuentra activo.",
+          "Vercel Inc.: proveedor de alojamiento web del sitio. Los datos técnicos pueden procesarse en sus servidores.",
+        ],
+      },
+      {
+        title: "Transferencias empresariales",
+        content:
+          "En caso de fusión, adquisición o venta de activos, sus datos podrían transferirse como parte de los activos empresariales, con notificación previa.",
+      },
+      {
+        title: "Obligaciones legales",
+        content:
+          "Podemos divulgar su información si así lo exige la ley o una autoridad competente.",
+      },
+    ],
+  },
+  {
+    id: "cookies",
+    number: "5",
+    title: "Cookies y tecnologías de seguimiento",
+    content:
+      "Utilizamos cookies propias y de terceros. Le informamos de forma separada y detallada en nuestra Política de Cookies, accesible desde el pie de página del sitio web.",
+    extra:
+      "Las cookies de analítica (Google Analytics) y publicidad (Google Ads, Meta Pixel) únicamente se activarán si usted otorga su consentimiento expreso a través de nuestro panel de gestión de cookies (CookieYes). Puede retirar o modificar su consentimiento en cualquier momento accediendo a dicho panel.",
+  },
+  {
+    id: "transferencias",
+    number: "6",
+    title: "Transferencias internacionales de datos",
+    content:
+      "Algunos de nuestros proveedores (Google LLC, Meta Platforms Ireland Ltd, Vercel Inc.) pueden transferir datos a países fuera del Espacio Económico Europeo, incluyendo Estados Unidos. Estas transferencias están amparadas por:",
+    list: [
+      "El Marco de Privacidad de Datos UE-EE.UU. (Data Privacy Framework), adoptado por la Comisión Europea.",
+      "Cláusulas Contractuales Tipo (CCT) aprobadas por la Comisión Europea (art. 46 RGPD).",
+    ],
+  },
+  {
+    id: "conservacion",
+    number: "7",
+    title: "Conservación de datos",
+    content:
+      "Conservaremos sus datos personales únicamente durante el tiempo necesario para los fines descritos en este Aviso, con un periodo máximo de 2 años, salvo que una obligación legal exija su conservación durante un plazo mayor (por ejemplo, la Ley General Tributaria establece 4 años para obligaciones fiscales).",
+    extra:
+      "Una vez transcurrido el periodo de conservación, los datos serán suprimidos o anonimizados de forma segura.",
+  },
+  {
+    id: "seguridad",
+    number: "8",
+    title: "Seguridad de la información",
+    content:
+      "Hemos implementado medidas técnicas y organizativas adecuadas para proteger su información personal frente a accesos no autorizados, pérdidas accidentales o destrucción, incluyendo el uso de protocolos HTTPS, control de accesos y alojamiento en proveedores certificados.",
+    extra:
+      "No obstante, ningún sistema de transmisión o almacenamiento de datos puede garantizar una seguridad absoluta. Si tuviera conocimiento de alguna vulnerabilidad, le rogamos nos lo comunique de inmediato.",
+  },
+  {
+    id: "menores",
+    number: "9",
+    title: "Menores de edad",
+    content:
+      "Nuestros servicios no están dirigidos a menores de 18 años. No recopilamos conscientemente datos personales de menores. Si tuviéramos conocimiento de que hemos recopilado datos de un menor sin el consentimiento parental verificable, procederemos a su supresión inmediata.",
+  },
+  {
+    id: "derechos",
+    number: "10",
+    title: "Sus derechos",
+    content:
+      "De conformidad con el RGPD y la Ley Orgánica 3/2018 (LOPDGDD), usted tiene derecho a:",
+    list: [
+      "Acceso: obtener confirmación sobre si tratamos sus datos y acceder a ellos.",
+      "Rectificación: solicitar la corrección de datos inexactos o incompletos.",
+      "Supresión («derecho al olvido»): solicitar la eliminación de sus datos cuando ya no sean necesarios.",
+      "Limitación del tratamiento: solicitar que se restrinja el uso de sus datos en determinadas circunstancias.",
+      "Portabilidad: recibir sus datos en formato estructurado y de uso común.",
+      "Oposición: oponerse al tratamiento de sus datos, en particular con fines de marketing directo.",
+      "Retirar el consentimiento: en cualquier momento, sin que ello afecte a la licitud del tratamiento previo.",
+    ],
+    extra:
+      "Para ejercer cualquiera de estos derechos, contacte con nosotros en desandroseguros@gmail.com, indicando claramente el derecho que desea ejercer y adjuntando una copia de su documento de identidad.",
+    highlight:
+      "Derecho a reclamar ante la AEPD: Si considera que el tratamiento de sus datos vulnera la normativa vigente, tiene derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD), www.aepd.es, Calle Jorge Juan 6, 28001 Madrid.",
+  },
+  {
+    id: "dnt",
+    number: "11",
+    title: "Señales Do Not Track (DNT)",
+    content:
+      "Actualmente nuestro sitio web no responde a señales Do Not Track (DNT) emitidas por los navegadores, dado que no existe un estándar uniforme para su interpretación. Puede gestionar sus preferencias de seguimiento a través de nuestro panel de cookies.",
+  },
+  {
+    id: "actualizaciones",
+    number: "12",
+    title: "Actualizaciones de esta política",
+    content:
+      "Podemos actualizar este Aviso de Privacidad periódicamente. La versión actualizada se indicará con la fecha de «Última actualización» al inicio del documento. Si realizamos cambios sustanciales, se lo notificaremos mediante un aviso destacado en el sitio web. Le recomendamos revisar esta política periódicamente.",
+  },
+  {
+    id: "contacto",
+    number: "13",
+    title: "Contacto",
+    isContact: true,
+  },
+  {
+    id: "gestion",
+    number: "14",
+    title: "Gestión y solicitud de datos",
+    content:
+      "Puede solicitar en cualquier momento el acceso, corrección, portabilidad o eliminación de sus datos personales contactándonos por los medios indicados en la sección anterior. Responderemos a su solicitud en el plazo máximo de un mes desde su recepción, prorrogable en casos complejos.",
+  },
+];
