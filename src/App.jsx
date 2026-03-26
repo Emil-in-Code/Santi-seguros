@@ -7,7 +7,7 @@ import Footer from './widgets/Footer/Footer.jsx'
 import AboutMe from './components/AboutMe/AboutMe.jsx'
 import { Routes, Route } from 'react-router-dom'; 
 import ServiceDetail from './pages/ServiceDetail.jsx'; 
-
+import PrivacyPolicy from './pages/Privacy.jsx';
 function App() {
   return (
     <>
@@ -40,6 +40,7 @@ function App() {
                 </section>
               </main>
               <AboutMe />
+              <PrivacyPolicy/>
             </>
           } 
         />
