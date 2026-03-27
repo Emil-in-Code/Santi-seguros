@@ -87,6 +87,7 @@
   grid-template-columns: 180px 1fr;
   gap: 0 3rem;
   align-items: start;
+  text-align:start;
 }
 
 /* ── TOC ─────────────────────────────────────────────── */

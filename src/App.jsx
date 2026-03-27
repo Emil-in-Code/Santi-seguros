@@ -17,7 +17,6 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        {/* RUTA PRINCIPAL (Home) */}
         <Route
           path="/"
           element={
