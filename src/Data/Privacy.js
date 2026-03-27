@@ -3,6 +3,7 @@ export const LAST_UPDATED = "25 de marzo de 2026";
 export const RESPONSIBLE = {
   name: "Santiago De Sandro",
   trade: "De Sandro Seguros",
+  dni:"Y1559866c",
   address: "Calle Benidoleig 4, 3.ª planta, puerta 8,CP 46017 Valencia, España",
   email: "desandroseguros@gmail.com",
   website: "segurosdesandro.es",
@@ -22,11 +23,12 @@ export const sections = [
       {
         title: "Información recopilada automáticamente",
         content:
-          "Cuando visita nuestro sitio web, podemos recopilar automáticamente determinada información técnica. Esta información se recoge mediante cookies y tecnologías de seguimiento de terceros, sujetas al consentimiento previo del usuario.",
+        "Este sitio web no dispone de formularios de registro, ni recoge datos de forma directa. No obstante se pueden recopilar datos de forma indirecta mediante:",
         list: [
-          "Dirección IP y datos de geolocalización aproximada.",
+          "Datos de navegación(dirección IP y datos de geolocalización aproximada.",
           "Tipo de navegador y sistema operativo.",
           "Páginas visitadas, tiempo de permanencia y acciones realizadas en el sitio.",
+          "Cookies y tecnologías similares",
           "Datos del dispositivo (tipo, identificadores técnicos).",
         ],
       },
@@ -45,7 +47,7 @@ export const sections = [
       "Procesamos su información personal con las siguientes finalidades:",
     list: [
       "Atender y responder a sus consultas y solicitudes de contacto.",
-      "Analizar el uso del sitio web para mejorar su funcionamiento y contenido (analítica web).",
+      "Analizar el uso del sitio web para mejorar su funcionamiento y contenido (Google Analitycs).",
       "Mostrar publicidad personalizada y medir el rendimiento de nuestras campañas de marketing digital (Google Ads, Meta Ads), siempre previa obtención de su consentimiento.",
       "Cumplir con nuestras obligaciones legales.",
       "Proteger los intereses vitales del interesado o de terceros en casos excepcionales.",

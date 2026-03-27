@@ -11,6 +11,7 @@ import ServiceDetail from './pages/ServiceDetail.jsx';
 
 // Carga diferida: estos bundles solo se descargan cuando el usuario navega a la ruta
 const PrivacidadPage = lazy(() => import('./pages/PrivacyPage.jsx'));
+const CookiesPage = lazy(() => import ('./pages/CookiesPage.jsx')) 
 
 function App() {
   return (
@@ -59,6 +60,15 @@ function App() {
             <Suspense fallback={<div style={{ padding: '4rem', textAlign: 'center', color: '#6b6b6b' }}>Cargando...</div>}>
               <PrivacidadPage />
             </Suspense>
+          }
+        />
+
+        <Route
+          path="/cookies"
+          element={
+            <Suspense fallback={<div style={{ padding: '4rem', textAlign: 'center', color: '#6b6b6b' }}>Cargando...</div>}>
+              <CookiesPage />
+            </Suspense> 
           }
         />
       </Routes>

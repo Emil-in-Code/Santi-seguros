@@ -43,6 +43,7 @@ export default function Footer({ id }) {
           <span className={styles.copy}> 2026 Desandro Seguros — Todos los derechos reservados</span>
           <nav className={styles.legal} aria-label="Aviso legal">
             <Link to="/privacidad" className={styles.legalLink}>Política de privacidad</Link>
+            <Link to="/cookies" className={styles.legalLink}>Política de cookies</Link>
           </nav>
           <span className={styles.dev}>
             Diseñado y desarrollado con ♥ por <a href="#" className={styles.devLink}>Emilio Flor</a>
