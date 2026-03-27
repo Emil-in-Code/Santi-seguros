@@ -54,10 +54,17 @@ function ContactCard() {
             {RESPONSIBLE.name} ({RESPONSIBLE.trade})
           </span>
         </div>
+
+        <div className={styles.contactRow}>
+          <span className={styles.contactLabel}>Documento</span> 
+          <span className={styles.contactValue}>{RESPONSIBLE.dni}</span>         
+        </div>
+
         <div className={styles.contactRow}>
           <span className={styles.contactLabel}>Dirección</span>
           <span className={styles.contactValue}>{RESPONSIBLE.address}</span>
         </div>
+
         <div className={styles.contactRow}>
           <span className={styles.contactLabel}>Email</span>
           <span className={styles.contactValue}>
