@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styles from './Services.module.css'
+
 export default function Services({ id, imgSrc, imgAlt, title, text, badge,waMessage, loading = "lazy"}) {
   
   const phoneNumber = "34614866499"

@@ -1,16 +1,18 @@
+export const LEGAL_LAST_UPDATED = "25 de marzo de 2026";
+
 export const RESPONSIBLE = {
   name: "Santiago De Sandro",
-  DNI:"Y1559866c"
+  dni:"Y1559866c",
   trade: "De Sandro Seguros",
   address: "Calle Benidoleig 4, 3.ª planta, puerta 8,CP 46017 Valencia, España",
   email: "desandroseguros@gmail.com",
   website: "segurosdesandro.es",
-  activity:"Mediación de seguros como agente vinculado a Preventiva Seguros/ Preventiva Salud"
+  activity:"Mediación de seguros como agente vinculado a Preventiva Seguros/ Preventiva Salud",
 };
 
-export const section =[
+export const LegalSections =[
   {
-    id: "Condiciones de uso",
+    id: "Condiciones-de-uso",
     number: "1",
     title: "Condiciones de uso",
     content:`El acceso y uso de este sitio web atribuye la condición de usuario, 
@@ -27,7 +29,7 @@ export const section =[
     id: "Responsabilidad",
     number: "2",
     title: "Responsabilidad",
-    content:"El titular no se hace responsable de:"
+    content:"El titular no se hace responsable de:",
     list: [
       "El mal uso que se realice del contenido del sitio web",
       "Los daños derivados del uso de la información contenida",
@@ -36,28 +38,28 @@ export const section =[
 
   },
   {
-    id: "Enlaces externos",
+    id: "Enlaces-externos",
     number: "3",
-    title: "Enlaces externos",
+    title: "Enlaces Externos",
     content:`:Este sitio web puede contener enlaces a plataformas externas como WhatsApp o redes sociales.
               El titular no se responsabiliza del contenido ni de las políticas de privacidad de dichos sitios,
-              siendo responsabilidad del usuario revisar las condiciones de uso de los mismos.`
+              siendo responsabilidad del usuario revisar las condiciones de uso de los mismos.`,
   },
   {
-    id:"Propiedad intelectual",
+    id:"Propiedad-intelectual",
     number:"4",
     title:"Propiedad intelectual",
     content:`Todos los contenidos del sitio web (textos, imágenes, diseño, etc.) 
-             son propiedad del titular o cuentan con licencia, quedando prohibida su reproducción sin autorización.`
+             son propiedad del titular o cuentan con licencia, quedando prohibida su reproducción sin autorización.`,
   },
   {
-    id:"Información comercial",
+    id:"Información-comercial",
     number:"5",
     title:"Información comercial",
     content:`La información comercial mostrada en este sitio web tiene carácter meramente informativo 
              y no constituye una oferta vinculante. 
              La contratación de proudctos de seguro se realiza fuera del sitio web, 
              estando sujeta a las condiciones específicas de la aseguradora correspondiente.
-             El titular actúa como mediador de seguros.`
+             El titular actúa como mediador de seguros.`,
   }, 
 ]
