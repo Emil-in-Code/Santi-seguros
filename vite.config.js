@@ -1,9 +1,20 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import sitemap form 'vite-plugin-sitemap'
+import { services } from './src/Data/Services.js'
 
-// https://vite.dev/config/
+const serviceRoutes = servies.map(s => `/seguro/${s,id}`)
+
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    sitemap({
+      hostname:'https://segurosdesandro.es',
+      routes: [
+        '/'
+      ]
+    })
+  ],
   server: {
     allowedHosts: [
       '.tunnelmole.net',

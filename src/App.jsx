@@ -1,13 +1,12 @@
 import { lazy, Suspense } from 'react';
-import Navbar from './widgets/Navbar/Navbar.jsx'
-import HeroSection from './components/Hero/HeroSection.jsx'
-import { services } from './Data/Services.js';
-import './App.css'
-import Services from './components/Services/Services.jsx'
-import Footer from './widgets/Footer/Footer.jsx'
-import AboutMe from './components/AboutMe/AboutMe.jsx'
 import { Routes, Route } from 'react-router-dom';
+
+import { services } from './Data/Services.js';
 import ServiceDetail from './pages/ServiceDetail.jsx';
+
+import './App.css';
+import { HeroSection, Services, AboutMe } from './components';
+import { Navbar, Footer } from './widgets';
 
 // Carga diferida: estos bundles solo se descargan cuando el usuario navega a la ruta
 const PrivacidadPage = lazy(() => import('./pages/PrivacyPage.jsx'));

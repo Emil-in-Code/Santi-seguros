@@ -9,7 +9,7 @@ export default function ServiceDetail() {
   if (!servicio) return (
     <div className={styles.notFound}>
       <h2>Seguro no encontrado</h2>
-      <Link to="/" className={styles.backLink}>← Volver al inicio</Link>
+      <Link to="/" className={styles.backLink}><strong>← Volver al inicio</strong></Link>
     </div>
   );
 
@@ -110,7 +110,7 @@ export default function ServiceDetail() {
                        ? <Link to={`/seguro/${prev.id}`} className={styles.navLink}>← {prev.title}</Link>
                        : <span />
                      }
-                     <Link to="/" className={styles.backLink}>Todos</Link>
+                     <Link to="/" className={styles.backLink}><strong>Inicio</strong></Link>
                      {next
                        ? <Link to={`/seguro/${next.id}`} className={styles.navLink}>{next.title} →</Link>
                        : <span />

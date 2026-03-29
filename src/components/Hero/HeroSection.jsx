@@ -3,7 +3,7 @@ import styles from './HeroSection.module.css';
 import CtaButton from '../CtaButton/cta.jsx';
 import heroImage from '../../assets/heroimg.webp';
 
-// 🔥 Lazy load REAL
+//  Lazy load 
 const LightPillar = lazy(() => import('../LightPillar/LightPillar.jsx'));
 
 function useBreakpoint() {
@@ -34,13 +34,13 @@ export default function HeroSection() {
   const isMobile = breakpoint === 'mobile';
   const isTablet = breakpoint === 'tablet';
 
-  // 🔥 Delay controlado (mejora LCP)
+  //  Delay controlado (mejora LCP)
   const [showEffect, setShowEffect] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowEffect(true);
-    }, 500); // podés ajustar 300–800ms
+    }, 500); // se puede ajustar 300–800ms
 
     return () => clearTimeout(timer);
   }, []);
@@ -48,7 +48,7 @@ export default function HeroSection() {
   return (
     <section className={`${styles.heroContainer} ${styles[breakpoint]}`}>
 
-      {/* 🔥 Fondo optimizado */}
+      {/* Fondo optimizado */}
       {!isMobile ? (
         <div className={styles.pillarBackground}>
 
@@ -110,10 +110,15 @@ export default function HeroSection() {
               text="Contactar"
             />
             <CtaButton
-              href="#services"
+              to="/seguro/1"
               className={styles.buscarBtn}
               text="Ver Seguros"
             />
+            {/* <CtaButton
+              href="#services"
+              className={styles.buscarBtn}
+              text="Ver Seguros"
+            />*/}
           </div>
         </div>
 

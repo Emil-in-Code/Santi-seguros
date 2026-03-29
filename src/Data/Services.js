@@ -57,7 +57,7 @@ export const services = [
   },
   { 
     id: 3, 
-    title: "Autonomo",
+    title: "Autónomo",
     text: "Protege tu nivel de ingresos ante cualquier enfermedad o accidente",
     image: autonomo,
     waMessage: "Hola, estoy interesado en el Seguro para Autónomos ¿me podrías dar más información?"
@@ -71,7 +71,7 @@ export const services = [
   },
   { 
     id: 5, 
-    title: "Comercio y Pymes",
+    title: "Comercios/Pymes",
     text: "Pase lo que pase tu negocio no debe parar",
     image: comercio,
     waMessage: "Hola, estoy interesado en el Seguro de Comercio y Pymes ¿me podrías dar más información?"

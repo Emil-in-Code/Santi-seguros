@@ -1,36 +1,35 @@
 // Navbar.jsx
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import logo from '../../assets/Página 20.svg'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
 
   const isDetailPage = location.pathname.startsWith('/seguro/');
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
-  if (isDetailPage) return null;
 
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
         <div className={styles.container}>
-          <a href="/" className={styles.logo}>
+          <Link to="/" className={styles.logo} onClick={closeMenu}>
             <div className={styles.logoIcon}>
-              <img src={logo} className={styles.logoSvg} />
+              <img src={logo} className={styles.logoSvg} alt="logo"  />
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Menu */}
           <div className={styles.desktopMenu}>
-            <a href="#services" className={styles.navLink}>Servicios</a>
-            <a href="#Info" className={styles.navLink}>Sobre Mí</a>
-            <a href="#Footer" className={styles.navLink}>Contactos</a>
+            <NavHashLink smooth to="/#services" className={styles.navLink}>Servicios</NavHashLink>
+            <NavHashLink smooth to="/#Info" className={styles.navLink}>Sobre Mí</NavHashLink>
+            <NavHashLink smooth to="#Footer" className={styles.navLink}>Contactos</NavHashLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -46,9 +45,9 @@ export default function Navbar() {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className={styles.mobileMenu}>
-            <a href="#services" className={styles.mobileLink} onClick={closeMenu}>Servicios</a>
-            <a href="#Info" className={styles.mobileLink} onClick={closeMenu}>Sobre mí</a>
-            <a href="#Footer" className={styles.mobileLink} onClick={closeMenu}>Contacto</a>
+            <NavHashLink smooth to="/#services" className={styles.mobileLink} onClick={closeMenu}>Servicios</NavHashLink>
+            <NavHashLink smooth to="/#Info" className={styles.mobileLink} onClick={closeMenu}>Sobre mí</NavHashLink>
+            <NavHashLink smooth to="/#Footer" className={styles.mobileLink} onClick={closeMenu}>Contacto</NavHashLink>
           </div>
         )}
       </nav>
