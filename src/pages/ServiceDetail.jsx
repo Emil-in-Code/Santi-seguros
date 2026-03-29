@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { services } from '../Data/Services.js';
 import styles from './ServiceDetail.module.css';
+import { ServiceSeo } from '../components';
 
 export default function ServiceDetail() {
   const { id } = useParams();
@@ -22,7 +23,9 @@ export default function ServiceDetail() {
 
   return (
     <div className={styles.pageWrapper}>
-
+      
+      <ServiceSeo seo={servicio.seo} title={servicio.title} />
+      
       {/* HERO con imagen de fondo */}
       <div className={styles.hero} style={{ backgroundImage: `url(${servicio.image})` }}>
         <div className={styles.heroOverlay} />

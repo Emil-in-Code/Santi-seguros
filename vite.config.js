@@ -1,24 +1,26 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import sitemap form 'vite-plugin-sitemap'
-import { services } from './src/Data/Services.js'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import sitemap from 'vite-plugin-sitemap';
+import { services } from './src/Data/Services.js';
 
-const serviceRoutes = servies.map(s => `/seguro/${s,id}`)
+const serviceRoutes = services.map(s => `/seguro/${s.id}`)
 
 export default defineConfig({
+
+  assetsInclude:['**/*.webp'],
+
   plugins: [
     react(),
     sitemap({
-      hostname:'https://segurosdesandro.es',
-      routes: [
-        '/'
-      ]
+      hostname: 'https://segurosdesandro.es',
+      routes:['/', ...serviceRoutes],
     })
+
   ],
   server: {
     allowedHosts: [
       '.tunnelmole.net',
-      '.jv0fyt-ip-181-231-246-10.tunnelmole.net'
+        '.7zwdok-ip-181-45-177-54.tunnelmole.net'
     ]
   }
 })

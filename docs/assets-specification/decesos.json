@@ -1,0 +1,42 @@
+{
+  "image_id": "decesos_og_landscape",
+
+  "original_reference": "Decesosr.jpg",
+
+  "target_dimensions": "1200x630",
+
+  "composition": {
+
+    "subject": "Persona de espaldas, cabello canoso, vistiendo un abrigo azul oscuro y pantalones grises.",
+
+    "action": "Caminando por un sendero de tierra/piedra hacia el horizonte.",
+
+    "perspective": "Plano medio-largo desde atrás (back view), centrado en el eje vertical.",
+
+    "scenery": "Paisaje otoñal de colinas suaves, árboles con follaje ocre y verde, y un camino sinuoso que se pierde en la distancia."
+
+  },
+
+  "lighting_and_color": {
+
+    "time_of_day": "Atardecer (Golden Hour)",
+
+    "color_palette": ["Azul profundo", "Gris", "Dorado", "Ocre", "Verde pino"],
+
+    "lighting": "Luz suave y cálida proveniente del fondo, creando un efecto de silueta suave y profundidad atmosférica."
+
+  },
+
+  "style_and_mood": {
+
+    "vibe": "Sereno, contemplativo, pacífico y profesional.",
+
+    "purpose": "Seguro de decesos / Asistencia familiar.",
+
+    "technique": "Fotografía realista con enfoque nítido en el sujeto y un desenfoque (bokeh) suave en el fondo para generar profundidad."
+
+  },
+
+  "adaptation_notes": "Extensión horizontal mediante la continuación del paisaje lateral para alcanzar el formato 1200x630 sin deformar al sujeto central."
+
+}

@@ -9,6 +9,8 @@ import previsionPer from '../assets/services/Previr.webp'
 import planDentalF from '../assets/services/Dentalr.webp'
 import mascotas from '../assets/services/Mascotasr.webp'
 
+const BASE_URL = "https://desandroseguros.es";
+
 export const services = [
   { 
     id: 1, 
@@ -16,7 +18,14 @@ export const services = [
     text: "Llegado el momento, nos hacemos cargo de todo.",
     image: decesos,
     waMessage: "Hola, estoy interesado en el Seguro de Decesos ¿me podrías dar más información?",
-    badge:"más contratado",
+    badge:"más contratado", 
+    seo: {
+      title:"Seguro de Decesos | Tranquilidad Total para tu Familia | Preventiva VIVO",
+      description: "Protege a los tuyos cuando más lo necesitan. Con Preventiva VIVO nos ocupamos de traslados, trámites legales y apoyo psicológico. Infórmate sin compromiso.",
+      keywords: "Seguro de decesos, mejor seguro funerario, gastos de sepelio, asistencia familiar, cobertura de fallecimiento, seguro funerario, servicio funerario en Valencia",
+      //og:image específica por servicio, tiene que ser de 1200 x 630 px
+      //ogImage: `${BASE_URL}`,
+    },
     detail:
     `
       <p>Es el Seguro de Decesos que tú y tu familia necesitáis, porque llegado el momento, es la forma de asegurarte que no tengan que preocuparse por nada, porque con <br><strong>Preventiva VIVO</strong>, tu tranquilidad y la de los tuyos es lo que más nos importa.</p>
