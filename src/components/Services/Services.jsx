@@ -4,8 +4,18 @@ import styles from './Services.module.css';
 export default function Services({ id, imgSrc, imgAlt, title, text, badge,waMessage, loading = "lazy"}) {
   
   const phoneNumber = "34614866499"
-  const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(waMessage)}`;
-  
+
+  //función de seguimiento, se sabe por cuál seguro clickearon
+  const handleWhatsAppTracking = () => {
+     ReactGA.event({
+       category: "Conversión",
+       action: "Clic WhatsApp - Home",
+       label: title, // Ejemplo: "Seguro de Hogar"
+     });
+
+     const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(waMessage)}`;
+     window.open(waLink, "_blank", "noopener,noreferrer");
+  }; 
   return (
     <div className={styles.containerCard}>
       <img src={imgSrc} alt={imgAlt} className={styles.cardImgFull} loading={loading} />
@@ -24,14 +34,13 @@ export default function Services({ id, imgSrc, imgAlt, title, text, badge,waMess
         Ver +
         </Link>
         
-        <a 
-          href={waLink} 
+        <span 
+          onClick={handleWhatsAppTracking}
           target="_blank" 
-          rel="noopener noreferrer" 
           className={styles.glassPanelCta}
         >
         WP →
-        </a>
+        </span>
       </div>
     </div>
   );

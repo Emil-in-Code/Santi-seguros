@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import sitemap from 'vite-plugin-sitemap';
-import { services } from './src/Data/Services.js';
+import { servicesIds } from './src/Data/ServicesId.js';
 
-const serviceRoutes = services.map(s => `/seguro/${s.id}`)
+const serviceRoutes = servicesIds.map(s => `/seguro/${s.id}`)
 
 export default defineConfig({
 

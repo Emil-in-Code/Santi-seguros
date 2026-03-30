@@ -1,6 +1,6 @@
 /* Footer.module.css */
 .footer {
-  background: var(--elementsbg);
+  background: var(--colorText);
   padding: 3rem 2rem 1.5rem;
   border-top: 1px solid rgba(255,255,255,0.08);
   position: relative;

@@ -1,5 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 import { services } from './Data/Services.js';
 import ServiceDetail from './pages/ServiceDetail.jsx';
@@ -12,8 +14,17 @@ import { Navbar, Footer } from './widgets';
 const PrivacidadPage = lazy(() => import('./pages/PrivacyPage.jsx'));
 const CookiesPage = lazy(() => import ('./pages/CookiesPage.jsx')) 
 const LegalNoticePage = lazy(() => import ('./pages/LegalNoticePage.jsx')) 
+import ReactGA from "react-ga4"
 
 function App() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Esto avisa a Google cada vez que la URL cambia (ej: de / a /servicios)
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
+  }, [location]);
+  
   return (
     <>
       <Navbar />
