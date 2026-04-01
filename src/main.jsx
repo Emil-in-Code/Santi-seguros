@@ -4,9 +4,12 @@ import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
 import App from './App.jsx'
-import ReactGA from "react-ga4"
+import TagManager from 'react-gtm-module'
 
-ReactGA.initialize("G-J8TNHTMKYD");
+const tagManagerArgs = {
+  gtmId: "GTM-M42XXBCG"
+};
+TagManager.initialize(tagManagerArgs)
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
