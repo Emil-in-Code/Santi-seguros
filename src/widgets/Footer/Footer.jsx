@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styles from './Footer.module.css'
+import ReactGA from "react-ga4";
 
 export default function Footer({ id }) {
   return (
@@ -25,7 +26,17 @@ export default function Footer({ id }) {
               <span className={styles.linkValue}>@desandroseguros</span>
             </span>
           </a>
-          <a className={styles.linkItem} href="mailto:desandroseguros@gmail.com">
+          <a 
+            className={styles.linkItem} 
+            href="mailto:desandroseguros@gmail.com"
+            onClick={() => {
+              ReactGA.event({
+                category: "Contact",
+                action: "Click Email",
+                label: "Mail del Footer"
+              });
+            }}
+          >
             <span>
               <span className={styles.linkLabel}>Email</span>
               <span className={styles.linkValue}>desandroseguros@gmail.com</span>

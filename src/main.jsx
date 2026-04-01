@@ -6,8 +6,7 @@ import './index.css'
 import App from './App.jsx'
 import ReactGA from "react-ga4"
 
-ReactGA.initialize("G-561EL0P5T5");
-ReactGA.send({ hitType:"pageview", page: window.location.pathname});
+ReactGA.initialize("G-J8TNHTMKYD");
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

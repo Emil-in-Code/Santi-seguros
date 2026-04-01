@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { NavHashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
-import logo from '../../assets/Página 20.svg'
+import logo from '../../assets/Logo.svg'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

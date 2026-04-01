@@ -1,21 +1,12 @@
 import { Link } from 'react-router-dom';
 import styles from './Services.module.css';
+import ReactGA from "react-ga4"
 
 export default function Services({ id, imgSrc, imgAlt, title, text, badge,waMessage, loading = "lazy"}) {
   
   const phoneNumber = "34614866499"
-
-  //función de seguimiento, se sabe por cuál seguro clickearon
-  const handleWhatsAppTracking = () => {
-     ReactGA.event({
-       category: "Conversión",
-       action: "Clic WhatsApp - Home",
-       label: title, // Ejemplo: "Seguro de Hogar"
-     });
-
-     const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(waMessage)}`;
-     window.open(waLink, "_blank", "noopener,noreferrer");
-  }; 
+  const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(waMessage)}`;
+  
   return (
     <div className={styles.containerCard}>
       <img src={imgSrc} alt={imgAlt} className={styles.cardImgFull} loading={loading} />
@@ -28,19 +19,33 @@ export default function Services({ id, imgSrc, imgAlt, title, text, badge,waMess
         <p className={styles.glassPanelText}>{text}</p>
         <Link
           to={`/seguro/${id}`}
-          target="_blank"
           className={styles.glassPanelCta}
+          onClick={() => {
+            ReactGA.event({
+              category: "Engagement",
+              action: "Ver Detalle",
+              label:`card-${title}` ,
+            });
+          }}
         > 
-        Ver +
+          Ver +
         </Link>
         
-        <span 
-          onClick={handleWhatsAppTracking}
+        <a 
+          href={waLink} 
           target="_blank" 
+          rel="noopener noreferrer" 
           className={styles.glassPanelCta}
+          onClick={() => {
+            ReactGA.event({
+              category: "Lead",
+              action: "Click WhatsApp",
+              label: `Card - ${title}`
+            });
+          }}
         >
-        WP →
-        </span>
+          WP →
+        </a>
       </div>
     </div>
   );
