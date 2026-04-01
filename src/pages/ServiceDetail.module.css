@@ -157,7 +157,12 @@
   color: var(--colorText, #555);
   margin: 0;
 }
-
+.detailBody em {
+  font-size:0.95rem;
+  font-style: italic;
+  color: var(--elementsbg, #1a1a2e); /* O el color que prefieras */
+  font-weight: 700;
+}
 /* ── NO DETAIL FALLBACK ───────────────────────────────── */
 .noDetail {
   background: #f8f9fc;
