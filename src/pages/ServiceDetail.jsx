@@ -2,7 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { services } from '../Data/Services.js';
 import styles from './ServiceDetail.module.css';
 import { ServiceSeo } from '../components';
-import ReactGA from "react-ga4";
+
 
 export default function ServiceDetail() {
   const { id } = useParams();
@@ -21,6 +21,11 @@ export default function ServiceDetail() {
   const currentIndex = services.findIndex(s => s.id === parseInt(id));
   const prev = services[currentIndex - 1];
   const next = services[currentIndex + 1];
+ 
+  const pushEvent = (data) => {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(data);
+  };
 
   return (
     <div className={styles.pageWrapper}>
@@ -69,12 +74,19 @@ export default function ServiceDetail() {
               target="_blank"
               rel="noopener noreferrer"
               className={styles.waButton}
-              onClick={() => {
-                ReactGA.event({
-                  category: "Lead",
-                  action: "Click WhatsApp",
-                  label: `Detalle - ${servicio.title}`
+              onClick={(e) => {
+                e.preventDefault();
+
+                pushEvent({
+                  event: "generate_lead",
+                  method: "whatsapp",
+                  item_name: servicio.title,
+                  item_id: servicio.id
                 });
+
+                setTimeout(() => {
+                  window.open(waLink, "_blank");
+                }, 150);
               }}
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true">

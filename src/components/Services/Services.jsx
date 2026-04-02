@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
 import styles from './Services.module.css';
-import ReactGA from "react-ga4"
 
 export default function Services({ id, imgSrc, imgAlt, title, text, badge,waMessage, loading = "lazy"}) {
   
   const phoneNumber = "34614866499"
   const waLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(waMessage)}`;
-  
+ 
+  const pushEvent = (data) => {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(data);
+  };
+
   return (
     <div className={styles.containerCard}>
       <img src={imgSrc} alt={imgAlt} className={styles.cardImgFull} loading={loading} />
@@ -21,10 +25,11 @@ export default function Services({ id, imgSrc, imgAlt, title, text, badge,waMess
           to={`/seguro/${id}`}
           className={styles.glassPanelCta}
           onClick={() => {
-            ReactGA.event({
-              category: "Engagement",
-              action: "Ver Detalle",
-              label:`card-${title}` ,
+            pushEvent({
+              event: "select_content",
+              content_type:"service",
+              item_name: title,
+              item_id: id
             });
           }}
         > 
@@ -36,12 +41,19 @@ export default function Services({ id, imgSrc, imgAlt, title, text, badge,waMess
           target="_blank" 
           rel="noopener noreferrer" 
           className={styles.glassPanelCta}
-          onClick={() => {
-            ReactGA.event({
-              category: "Lead",
-              action: "Click WhatsApp",
-              label: `Card - ${title}`
+          onClick={(e) => {
+            e.preventDefault();
+
+            pushEvent({
+              event: "generate_lead",
+              content_type:"whatsapp",
+              item_name: title,
+              item_id: id
             });
+
+            setTimeout(() => {
+              window.open(waLink,"_blank");
+            },150)
           }}
         >
           WP →

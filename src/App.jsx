@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import usePageTracking from "./hook/useGtmTracking.js";
 
 import { services } from './Data/Services.js';
 import ServiceDetail from './pages/ServiceDetail.jsx';
@@ -12,8 +13,6 @@ import { Navbar, Footer } from './widgets';
 const PrivacidadPage = lazy(() => import('./pages/PrivacyPage.jsx'));
 const CookiesPage = lazy(() => import ('./pages/CookiesPage.jsx')) 
 const LegalNoticePage = lazy(() => import ('./pages/LegalNoticePage.jsx')) 
-import ReactGA from "react-ga4"
-import usePageTracking from "./hooks/usePageTracking.js";
 
 function App() {
   usePageTracking();
