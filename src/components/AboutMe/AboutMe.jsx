@@ -16,8 +16,8 @@ export default function AboutMe() {
       </div>
       <div className={styles.textBox1}>
         <p className={styles.highlightText}>
-          ¡Hola!<br/> soy <em>Santiago De Sandro</em><br />
-          Sé que lo que buscas no es solo una póliza, sino la <strong>certeza </strong>
+          ¡Hola!<br/> soy <em><strong>Santiago De Sandro</strong> </em> 
+          sé que lo que buscas no es solo una póliza, sino la <strong>certeza </strong>
           de que tu familia y tu hogar estarán siempre a salvo.
           Mi meta es ser tu gestor de confianza en <strong>Preventiva Seguros</strong>,
           esa persona a la que llamas y que siempre tiene una solución.

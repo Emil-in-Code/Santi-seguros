@@ -10,6 +10,7 @@ import planDentalF from '../assets/services/Dentalr.webp'
 import mascotas from '../assets/services/Mascotasr.webp'
 
 const BASE_URL = "https://desandroseguros.es";
+const OG_IMAGE_DEFAULT = `${BASE_URL}/seo/opengraph.png`;
 
 export const services = [
   { 
@@ -21,10 +22,13 @@ export const services = [
     badge:"más contratado", 
     seo: {
       title:"Seguro de Decesos | Tranquilidad Total para tu Familia | Preventiva VIVO",
-      description: "Protege a los tuyos cuando más lo necesitan. Con Preventiva VIVO nos ocupamos de traslados, trámites legales y apoyo psicológico. Infórmate sin compromiso.",
-      keywords: "Seguro de decesos, mejor seguro funerario, gastos de sepelio, asistencia familiar, cobertura de fallecimiento, seguro funerario, servicio funerario en Valencia",
+      description:`Protege a los tuyos cuando más lo necesitan. Con Preventiva VIVO nos 
+                   ocupamos de traslados, trámites legales y apoyo psicológico. Infórmate sin compromiso.`,
+      keywords:`Seguro de decesos, mejor seguro funerario, gastos de sepelio, asistencia familiar, 
+                cobertura de fallecimiento, seguro funerario, servicio funerario en Valencia`,
       //og:image específica por servicio, tiene que ser de 1200 x 630 px
-      //ogImage: `${BASE_URL}`,
+      ogImage: OG_IMAGE_DEFAULT,
+      canonical: `${BASE_URL}/seguros/decesos`,
     },
     detail:
     `
@@ -66,7 +70,16 @@ export const services = [
     title: "Seguro de Hogar",
     text: "Seguro flexible que se adapta a cualquier tipo de necesidad y perfil familiar...",
     image: hogar,
-    waMessage: "Hola, estoy interesado en el Seguro de Hogar ¿me podrías dar más información?",
+    waMessage: "Hola, estoy interesado en el Seguro de Hogar ¿me podrías dar más información?", 
+    seo: {
+      title:"Seguro de Hogar | PreveHogar calidad Aenor",
+      description:`Protege tu vivienda con PreveHogar: asistencia 24h, garantía de calidad Aenor
+                   y la mejor relación cobertura-precio. Soluciones reales para tu familia en Valencia.`,
+      keywords:`seguro de hogar valencia, prevehogar, cobertura de vivienda, asistencia
+                hogar 24h, mejor seguro casa, protección hogar familia`,
+      ogImage: OG_IMAGE_DEFAULT,
+      canonical:`${BASE_URL}/seguros/hogar`,
+    },
     detail:
     `
       <p>Tu casa evoluciona. Tu seguro también. Presentamos <em>Prevehogar</em>, el seguro de hogar que 
@@ -84,6 +97,16 @@ export const services = [
     text: "Protege tu nivel de ingresos ante cualquier enfermedad o accidente",
     image: autonomo,
     waMessage: "Hola, estoy interesado en el Seguro para Autónomos ¿me podrías dar más información?",
+    seo: {
+      title:"Seguro para autónomos en Valencia",
+      description:`Protege tus ingresos como autónomo ante enfermedades o accidentes con subsidio diario,
+                   sistema baremado ágil y prima 100% deducible en IRPF.`,
+      keywords: `seguro autónomo Valencia, subsidio diario baja, seguro 
+                 enfermedad autónomo, deducción IRPF autónomo, incapacidad temporal autónomo`,
+      ogImage: OG_IMAGE_DEFAULT,
+      canonical:`${BASE_URL}/seguros/autonomo`,
+    },
+
     detail:
     `
     <p>
@@ -132,6 +155,14 @@ export const services = [
     text: "Una póliza con numerosas coberturas para los posibles riesgos edilicios...",
     image: comunidades,
     waMessage: "Hola, estoy interesado en el Seguro de Comunidades ¿me podrías dar más información?",
+    seo: {
+      description:`Seguro para comunidades de vecinos con amplia cobertura frente a incendios, inundaciones,
+                   vandalismo y daños eléctricos en zonas comunes de tu edificio.`,
+      keywords:`seguro comunidades de vecinos, seguro edificio Valencia, cobertura
+                comunidades, seguro daños edificio, póliza comunidades`,
+      ogImage: OG_IMAGE_DEFAULT,
+      canonical:`${BASE_URL}/seguros/comunidades`,
+    },
     detail:
     `
     <p>
@@ -177,6 +208,15 @@ export const services = [
     text: "Pase lo que pase tu negocio no debe parar",
     image: comercio,
     waMessage: "Hola, estoy interesado en el Seguro de Comercio y Pymes ¿me podrías dar más información?",
+    seo: {
+      title:"Seguro para comercios y pymes",
+      description:`Seguro para comercios y pymes que protege tu negocio ante incendios, robos, daños por agua,
+                   responsabilidad civil y mucho más. Asistencia 24 horas.`,
+      keywords:`seguro comercio Valencia, seguro pymes, seguro negocio, responsabilidad
+                civil comercio, seguro local comercial`,
+      ogImage: OG_IMAGE_DEFAULT,
+      canonical:`${BASE_URL}/seguros/comercios`,
+    },
     detail:
     `
       <p> 
@@ -246,6 +286,15 @@ export const services = [
     text: "Seguro para extranjeros que tengan residencia legal en España...",
     image: residentes,
     waMessage: "Hola, estoy interesado en el Seguro para Residentes ¿me podrías dar más información?",
+    seo: {
+      title:"Seguro para residentes en Valencia",
+      description:`Seguro para extranjeros con residencia legal en España. Cobertura de repatriación, 
+                   asistencia médica 24h, indemnizaciones por accidente y apoyo familiar.`,
+      keywords: `seguro residentes extranjeros España, seguro repatriación, seguro inmigrantes Valencia,
+                 asistencia médica extranjeros, seguro residencia legal España`,
+      ogImage: OG_IMAGE_DEFAULT,
+      canonical:`${BASE_URL}/seguros/residentes`,
+    },
     detail:
     `
     <p><em>La protección</em> diseñada específicamente <em>para extranjeros</em> con residencia legal en España. 
@@ -297,6 +346,15 @@ export const services = [
     text: "Haz lo que más amas sin preocuparte, estás cubierto",
     image: accidentesPers,
     waMessage: "Hola, estoy interesado en el Seguro de Accidente Personal ¿me podrías dar más información?",
+    seo: {
+      title:"Cobertura por accidente o invalidez",
+      description: `Seguro de accidentes personales que cubre fallecimiento, invalidez, 
+                    gastos médicos e incapacidad temporal en el ámbito laboral, familiar y de ocio.`,
+      keywords: `seguro accidente personal, invalidez permanente accidente, seguro incapacidad temporal,
+                 cobertura accidentes laborales, seguro accidentes Valencia" `,
+      ogImage: OG_IMAGE_DEFAULT,
+      canonical:`${BASE_URL}/seguros/accidentes`,
+    },
     detail:
     `
     <p>
@@ -344,6 +402,15 @@ export const services = [
     text: "Para quienes ponen primero el futuro de su familia",
     image: previsionPer,
     waMessage: "Hola, estoy interesado en el Plan de Previsión Personal ¿me podrías dar más información?",
+    seo: {
+      title:"Prevision personal",
+      description:`Plan de previsión personal con cobertura de fallecimiento,
+                   invalidez, enfermedades graves y hospitalización. Protege el futuro financiero de tu familia.`,
+      keywords:`plan previsión personal, seguro vida fallecimiento,
+                cobertura enfermedades graves, seguro invalidez absoluta, seguro familiar Valencia`,
+      ogImage: OG_IMAGE_DEFAULT,
+      canonical:`${BASE_URL}/seguros/prevision`,
+    },
     detail:
     `
     <p>
@@ -397,6 +464,15 @@ export const services = [
     text: "Contamos con una red nacional de clínicas especializadas en salud dental...",
     image: planDentalF,
     waMessage: "Hola, estoy interesado en el Plan Dental Familiar ¿me podrías dar más información?",
+    seo: {
+      title:"Plan dental familiar",
+      description:` Plan dental familiar con acceso a más de 1.900 clínicas, 43 servicios gratuitos,
+                    precios máximos garantizados y atención preferente para menores de 16 años.`,
+      keywords:`plan dental familiar Valencia, seguro dental niños,
+                clínicas dentales España, seguro dental precio, limpieza dental gratis seguro`,
+      ogImage: OG_IMAGE_DEFAULT,
+      canonical:`${BASE_URL}/seguros/dental`,
+    },
     detail:
     `
     <p>
@@ -449,6 +525,15 @@ export const services = [
     text: "Porque son un integrante más de la familia",
     image: mascotas,
     waMessage: "Hola, estoy interesado en el Seguro para Mascotas ¿me podrías dar más información?",
+    seo: {
+      title:"Seguro para mascotas",
+      description: `Seguro para mascotas adaptado a la Ley de Bienestar Animal. Responsabilidad civil hasta 200.000€,
+                    asistencia veterinaria baremada y defensa jurídica para tu perro.`,
+      keywords:`seguro mascotas Valencia, seguro perro responsabilidad civil, Ley Bienestar
+                Animal seguro, seguro veterinario perro, seguro obligatorio perro España`,
+      ogImage: OG_IMAGE_DEFAULT,
+      canonical:`${BASE_URL}/seguros/mascotas`,
+    },
     detail:
     `
     <p>

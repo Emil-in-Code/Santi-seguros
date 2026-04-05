@@ -30,6 +30,7 @@
   border-bottom: 1px solid #444;
   display: flex;
   align-items: center;
+  text-align:center;
 }
 
 /* Fila 1: Imagen corta, texto largo */

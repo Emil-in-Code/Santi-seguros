@@ -20,7 +20,7 @@ export default defineConfig({
   server: {
     allowedHosts: [
       '.tunnelmole.net',
-        '.7zwdok-ip-181-45-177-54.tunnelmole.net'
+        '.puuzif-ip-181-45-177-54.tunnelmole.net'
     ]
   }
 })
