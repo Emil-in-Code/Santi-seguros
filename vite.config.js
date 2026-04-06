@@ -3,24 +3,15 @@ import react from '@vitejs/plugin-react';
 import sitemap from 'vite-plugin-sitemap';
 import { servicesIds } from './src/Data/ServicesId.js';
 
-const serviceRoutes = servicesIds.map(s => `/seguro/${s.id}`)
+const serviceRoutes = servicesIds.map(s => `/seguro/${s.id}`);
 
 export default defineConfig({
-
-  assetsInclude:['**/*.webp'],
-
+  assetsInclude: ['**/*.webp'],
   plugins: [
     react(),
     sitemap({
       hostname: 'https://segurosdesandro.es',
-      routes:['/', ...serviceRoutes],
+      routes: ['/', ...serviceRoutes],
     })
-
-  ],
-  server: {
-    allowedHosts: [
-      '.tunnelmole.net',
-        '.puuzif-ip-181-45-177-54.tunnelmole.net'
-    ]
-  }
-})
+  ]
+});
