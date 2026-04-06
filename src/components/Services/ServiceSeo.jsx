@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 export default function ServiceSEO({ seo, title }) {
-  const seoTitle    = seo?.title       ?? `${title} `;
+  const seoTitle    = seo?.title       ?? title;
   const seoDesc     = seo?.description ?? "";
   const seoKeys     = seo?.keywords    ?? "";
   const seoImage    = seo?.ogImage     ?? "https://desandroseguros.es/seo/opengraph.png";

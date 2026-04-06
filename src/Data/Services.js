@@ -174,6 +174,7 @@ export const services = [
     image: comunidades,
     waMessage: "Hola, estoy interesado en el Seguro de Comunidades ¿me podrías dar más información?",
     seo: {
+      title:"Seguro para comunidades en Valencia",
       description:`Seguro para comunidades de vecinos con amplia cobertura frente a incendios, inundaciones,
                    vandalismo y daños eléctricos en zonas comunes de tu edificio.`,
       keywords:`seguro comunidades de vecinos, seguro edificio Valencia, cobertura
