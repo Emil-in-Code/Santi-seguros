@@ -68,27 +68,45 @@ export const services = [
   {
     id: 2, 
     title: "Seguro de Hogar",
-    text: "Seguro flexible que se adapta a cualquier tipo de necesidad y perfil familiar...",
+    text: `Seguridad flexible con garantía Aenor. Protegemos tu vivienda en Valencia con asistencia 24h 
+           y la mejor relación cobertura-precio.`,
     image: hogar,
     waMessage: "Hola, estoy interesado en el Seguro de Hogar ¿me podrías dar más información?", 
     seo: {
-      title:"Seguro de Hogar | PreveHogar calidad Aenor",
-      description:`Protege tu vivienda con PreveHogar: asistencia 24h, garantía de calidad Aenor
-                   y la mejor relación cobertura-precio. Soluciones reales para tu familia en Valencia.`,
-      keywords:`seguro de hogar valencia, prevehogar, cobertura de vivienda, asistencia
-                hogar 24h, mejor seguro casa, protección hogar familia`,
+      title:"Seguro de Hogar | PreveHogar | calidad Aenor",
+      description:`Protege tu casa con PreveHogar: asistencia 24h, garantía Aenor 
+                   y soluciones reales para familias en Valencia. Cobertura total al mejor precio.`,
+      keywords:`seguro hogar valencia, prevehogar, asistencia 24h, mejor seguro casa valencia, protección hogar, garantía aenor`,
       ogImage: OG_IMAGE_DEFAULT,
       canonical:`${BASE_URL}/seguros/hogar`,
     },
     detail:
-    `
-      <p>Tu casa evoluciona. Tu seguro también. Presentamos <em>Prevehogar</em>, el seguro de hogar que 
-      no solo te protege, sino que acompaña. Con el respaldo de la Garantía de <em>Calidad Aenor</em>,
-      combinamos la tecnología más avanzada con la rapidez que necesitáis:<br> <em>soluciones reales</em> las
-      24 horas, los 365 días del año.
-      Desde asistencia informática hasta apoyo para el empleo, nos adaptamos a vuestra familia y 
-      presupuesto con la mejor relación cobertura-precio del mercado.
-      Prevehogar: Protegemos lo que más queréis, impulsamos vuestra tranquilidad.</p>
+    `    
+    <p>
+        Tu hogar merece una protección que evolucione a vuestro ritmo. 
+        Con <em>Prevehogar</em>, no solo contratas una póliza; obtienes la tranquilidad de la 
+        <em>Garantía de Calidad Aenor</em>. Combinamos tecnología avanzada con la respuesta 
+        inmediata que necesitáis: soluciones reales las 24 horas, los 365 días del año.
+    </p>
+    
+    <ul>
+        <li>
+          <h3>Protección Total:</h3>
+          <article>Cobertura ante incendio, daños por agua, fallos eléctricos y fenómenos climáticos.</article>
+        </li>
+        <li>
+          <h3>Seguridad Activa:</h3>
+          <article> Protección contra robo (dentro y fuera de la vivienda), sustitución de cerraduras y uso fraudulento de tarjetas.</article>
+        </li>
+        <li>
+          <h3>Tranquilidad Legal:</h3> 
+          <article>Servicio de Responsabilidad Civil y defensa jurídica especializada.</article>
+        </li>
+        <li>
+          <h3>Soluciones del Día a Día:</h3>
+          <article>Servicio de bricolaje en casa, asistencia 24h y reparaciones urgentes.</article>
+        </li>
+      </ul>
     `
   },
   { 
