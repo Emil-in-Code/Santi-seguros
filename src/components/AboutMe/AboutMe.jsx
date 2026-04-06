@@ -1,6 +1,7 @@
 
 import styles from "./AboutMe.module.css"
-import profilePic from '../../assets/PicSanti.webp'
+import profilePic from '../../assets/aboutme.webp'
+import profile2 from "../../assets/aboutme2.webp"
 
 export default function AboutMe() {
   return (
@@ -12,7 +13,7 @@ export default function AboutMe() {
 
       {/* Fila 1 */}
       <div className={styles.imageBox1}>
-        <img src={profilePic} alt="Santiago de Sandro" />
+        <img src={profilePic} alt="foto de perfil de Santiago de Sandro" />
       </div>
       <div className={styles.textBox1}>
         <p className={styles.highlightText}>
@@ -32,63 +33,9 @@ export default function AboutMe() {
         </p>
       </div>
       <div className={styles.imageBox2}>
-        <img src={profilePic} alt="Santiago de Sandro" />
+        <img src={profile2} alt="foto de perfil de Santiago de Sandro" />
       </div>
     </section>
   )
 }
-/*export default function AboutMe(){
-  return(
-    <section id="Info" className={styles.InfoContainer}>
-      <h2 className={styles.InfoTitle}>Sobre mí</h2>
-
-      <div className={styles.contentWrapper}>
-
-        <p className={styles.infoText}>
-          "Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et<br/>
-          dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat.<br/> Duis aute irure dolor
-          in reprehenderit in voluptate velit esse cillu
-          m dolore
-          eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa
-          qui officia deserunt mollit anim id est laborum."
-        </p>
-
-        <img 
-          src={profilePic}
-          alt="foto de santiago de sandro" 
-          className={styles.profilePic}
-        />
-      </div>
-
-      <div className={styles.contentWrapper}>
-        <img 
-          src={profilePic}
-          alt="foto de santiago de sandro" 
-          className={styles.profilePic2}
-        />
-        <p className={styles.infoText2}>
-          "Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi
-          ut aliquip ex ea commodo consequat. Duis aute irure dolor
-          in reprehenderit in voluptate velit esse cillu
-          m dolore
-          eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa
-          qui officia deserunt mollit anim id est laborum."
-        </p>
-
-
-      </div>
-      
-    </section>
-  )
-}*/
 

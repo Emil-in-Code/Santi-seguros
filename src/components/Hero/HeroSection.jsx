@@ -114,11 +114,7 @@ export default function HeroSection() {
               className={styles.buscarBtn}
               text="Ver Seguros"
             />
-            {/* <CtaButton
-              href="#services"
-              className={styles.buscarBtn}
-              text="Ver Seguros"
-            />*/}
+
           </div>
         </div>
 

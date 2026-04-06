@@ -1,0 +1,88 @@
+//foto del aboutMe
+{
+  "sujeto": {
+    "caracteristicas_fisicas": {
+      "genero": "Masculino",
+      "etnia_aparente": "Hispano / Latinoamericano",
+      "edad_aparente": "Entre 35 y 45 años",
+      "complexion": "Promedio, atlético-profesional",
+      "cabello": {
+        "color": "Gris marengo / Sal y pimienta (mezcla de negro y canas)",
+        "estilo": "Corto, texturizado, peinado hacia arriba y ligeramente hacia el lado, con los lados bien recortados",
+        "barba": "Barba de tres días (stubble), bien cuidada, mezclando tonos oscuros y grises"
+      },
+      "rostro": {
+        "forma": "Ovalada, con mandíbula definida",
+        "ojos": "Oscuros, almendrados, con expresión cálida y arrugas de expresión (crow's feet) naturales",
+        "nariz": "Recta, de tamaño medio",
+        "labios": "Medianamente gruesos",
+        "expresion_por_defecto": "Sonrisa amplia, genuina y accesible, mostrando los dientes superiores"
+      }
+    },
+    "vestimenta_referencia": {
+      "estilo": "Business Casual Elegante",
+      "chaqueta": "Chaqueta de traje o blazer de lana texturizada en color gris oscuro/carbón, de dos botones",
+      "camisa": "Camisa de vestir blanca, limpia y planchada, con cuello abierto (sin corbata)",
+      "pantalones": "Pantalones de vestir oscuros (azul marino o negro)",
+      "accesorios": "Cinturón de cuero marrón oscuro con hebilla plateada sencilla"
+    },
+    "postura_y_lenguaje_corporal": {
+      "postura_habitual": "Erguida, de pie, proyectando confianza y profesionalismo",
+      "manos": "Brazos cruzados sobre el pecho (postura de 'power pose' accesible)"
+    },
+    "identidad_de_marca": {
+      "rol": "Vendedor de Seguros / Asesor Financiero senior",
+      "marca_asociada": {
+        "nombre": "De sandro seguros",
+        "logotipo": "Escudo estilizado en forma de 'S', color plateado, en base de cristal",
+        "colores_corporativos_asociados": "Gris profesional, azul oscuro, blanco"
+      }
+    },
+    "entorno_y_estilo_fotografico_base": {
+      "iluminación": "Natural, suave, de estudio profesional, con luz de fondo cálida (bokeh de ciudad)",
+      "fondo": "Oficina corporativa moderna de planta abierta, con grandes ventanales con vistas a una ciudad (desenfocada/bokeh), y otros compañeros trabajando en segundo plano (desenfocados)",
+      "paleta_de_colores": "Tonos fríos de oficina (gris, azul) contrastados con la calidez del sol poniente y la madera del escritorio",
+      "profundidad_de_campo": "Baja (shallow depth of field), sujeto en primer plano nítido y fondo desenfocado",
+      "angulo": "Nivel de los ojos, plano medio (mid-shot)"
+    }
+  }
+}
+
+{
+  "sujeto": {
+    "genero": "Femenino",
+    "etnia_aparente": "Latina / Hispana",
+    "edad_aparente": "Entre 20 y 25 años",
+    "complexion": {
+      "tipo": "Delgada",
+      "musculatura": "Tonificada, atlética (como la de una patinadora)",
+      "estatura": "Promedio"
+    },
+    "cabello": {
+      "textura": "Rizado",
+      "patrón": "Rizos definidos y voluminosos",
+      "color": "Marrón oscuro / Castaño",
+      "longitud": "Mediana",
+      "estilo_habitual": "Atado en una coleta alta y despeinada para actividades"
+    },
+    "rostro": {
+      "forma": "Ovalada",
+      "expresion_defecto": "Sonrisa amplia, genuina y alegre",
+      "ojos": {
+        "color": "Marrón oscuro",
+        "forma": "Almendrados",
+        "caracteristica": "Expresivos y cálidos al sonreír"
+      },
+      "nariz": "Proporcionada, ligeramente respingona",
+      "pómulos": "Ligeramente definidos por la sonrisa"
+    },
+    "tono_piel": "Trigueño / Oliva medio, cálido, besado por el sol",
+    "vestimenta_referencia_para_contexto": {
+      "estilo": "Casual y funcional",
+      "top": " blusa beige o marrón claro, ideal para un otoño entrante",
+      "pantalones": "Vaqueros ajustados de lavado medio (skinny jeans)",
+      "calzado": "Zapatillas bajas negras de suela blanca (estilo skater)"
+    },
+    "detalles_especificos_pose": "Sentada en la oficina de sujeto uno, dando la mano para cerrar contrato"
+  }
+}
